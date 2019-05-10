@@ -1,0 +1,2 @@
+class AurthorsController < ApplicationController
+end
