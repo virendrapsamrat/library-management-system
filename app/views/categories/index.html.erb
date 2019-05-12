@@ -1,0 +1,27 @@
+<h1>this is the first index page </h1>
+ 
+<table>
+  <tr>
+    <th>Category Name</th>
+    </tr>
+
+    <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+
+      <td>      
+      <%= link_to 'Show', category_path(category) %></td>
+      <td>
+      <%# if (company.user_id == current_user.id) %>
+      <%= link_to ' Edit ', edit_category_path(category) %>
+      <%= link_to ' Delete ', category_path(category),
+                method: :delete,
+                  data: { confirm: 'Are you sure want to delete?' } %>
+
+        <%# end %>
+      </td>
+    </tr>
+    <% end %>
+</table>
+<hr />
+  <%= link_to ' Add new category ', new_category_path %>

@@ -1,0 +1,30 @@
+<h1> this is book edited  </h1>
+<%= form_with scope: :book, url: books_path, local:true do |form| %>
+<p>
+   <%= form.label :Book_name %>
+   <%= form.text_field :name %>
+</p>
+<p>
+   <%= form.label :price %>
+   <%= form.text_field :price %>
+</p>
+<p><%= form.label :aurthor_id %>
+   <%= form.text_field :aurthor_id %>
+</p>
+<p>
+   <%= form.label :category_id %>
+   <%= form.text_area :category_id %>
+</p>
+
+<p>
+   <%= form.label :pages %>
+   <%= form.text_field :pages %>
+</p>
+
+<p>
+   <%= form.label :image %><br />
+   <%= form.file_field :image %>
+</p>
+<p>
+<%= form.submit %>
+<% end %>

@@ -1,0 +1,15 @@
+<h1> Create new aurhtor </h1>
+<%= form_with scope: :aurthor, url: aurthors_path, local:true do |form| %>
+<p>
+   <%= form.label :aurthor_name %>
+   <%= form.text_field :name %>
+</p>
+<p>
+   <%= form.label :age %>
+   <%= form.text_field :age %>
+</p>
+
+<p>
+<%= form.submit %>
+</p>
+<% end %>

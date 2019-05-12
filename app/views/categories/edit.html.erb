@@ -1,0 +1,8 @@
+<h1> Create new Book </h1>
+<%= form_with scope: :category, url: categories_path, local:true do |form| %>
+<p>
+   <%= form.label :Category_name %>
+   <%= form.text_field :name %>
+</p>
+ <%= form.submit %>
+<% end %>

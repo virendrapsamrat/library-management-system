@@ -1,0 +1,38 @@
+<h1>Listing Companies</h1>
+ <%= link_to 'Add new Book', new_book_path %>
+<table>
+  <tr>
+    <th>Book Name</th>
+    <th>Book price</th>
+    <th>author Name</th>
+    <th>Categories</th>
+    <th>pages</th>
+    <th>image</th>
+  </tr>
+ 
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.name %></td>
+      <td><%= book.price %></td>
+      <td><%= book.aurthor_id %></td>
+      <td><%= book.category_id %></td>
+      <td><%= book.pages %></td>
+      <td><%= book.image %></td>
+
+      <td>      
+      <%= link_to 'Show', book_path(book) %></td>
+      <td>
+      <%# if (company.user_id == current_user.id) %>
+      <%= link_to ' Edit ', edit_book_path(book) %>
+      <%= link_to ' Delete ', book_path(book),
+                method: :delete,
+                  data: { confirm: 'Are you sure want to delete?' } %>
+
+        <%# end %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  <hr />
+
+    <%#= link_to 'Add new Book', new_book_path, class: 'link-to-text-color' %>

@@ -1,0 +1,31 @@
+<h1> Books details </h1>
+<p>
+  <strong>Book Name:</strong>
+  <%= @book.name %>
+</p>
+ 
+<p>
+  <strong>price</strong>
+  <%= @book.price %>
+</p>
+
+<p>
+  <strong>author_id:</strong>
+  <%= @book.aurthor.name %>
+</p>
+
+<p>
+  <strong>category_id:</strong>
+  <%= @book.category.name %>
+</p>
+
+<p>
+  <strong>pages</strong>
+  <%= @book.pages %>
+</p>
+
+<p>
+  <strong>image</strong>
+ <%= image_tag(@book.image.url, size: "100x100")%>
+</p>
+
