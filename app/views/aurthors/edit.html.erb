@@ -1,5 +1,5 @@
 <h1> Create new aurhtor </h1>
-<%= form_with scope: :aurthor, url: aurthors_path, local:true do |form| %>
+<%= form_with(model: @aurthor, local: true) do |form| %>
 <p>
    <%= form.label :aurthor_name %>
    <%= form.text_field :name %>

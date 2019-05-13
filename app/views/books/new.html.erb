@@ -10,12 +10,12 @@
 </p>
 <p><%= form.label :aurthor_id %>
    <%#= form.text_field :aurthor_id %>
-   <%= form.select :aurthor_id, Book.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+   <%= form.select :aurthor_id, Aurthor.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
 </p>
 <p>
    <%= form.label :category_id %>
    <%#= form.text_area :category_id %>
-   <%= form.select :category_id, Book.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+   <%= form.select :category_id, Category.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
 </p>
 
 <p>

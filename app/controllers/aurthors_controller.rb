@@ -22,9 +22,9 @@ class AurthorsController < ApplicationController
    end
 
 	def update
-	  @aurthor = Aurthor.find(params[:id])
+	    @aurthor = Aurthor.find(params[:id])
 	  if @aurthor.update(aurthor_params)
-	    redirect_to @aurthor
+	    redirect_to aurthors_path
 	  else
 	    render 'edit'
 	  end
@@ -33,7 +33,7 @@ class AurthorsController < ApplicationController
 	 def destroy
 	  @aurthor = Aurthor.find(params[:id])
 	  @aurthor.destroy
-	 redirect_to aurthors_path
+	  redirect_to aurthors_path
 	 end
 
 	private

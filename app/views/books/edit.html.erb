@@ -1,5 +1,5 @@
 <h1> this is book edited  </h1>
-<%= form_with scope: :book, url: books_path, local:true do |form| %>
+<%= form_with(model: @book, local: true) do |form| %>
 <p>
    <%= form.label :Book_name %>
    <%= form.text_field :name %>
@@ -9,11 +9,13 @@
    <%= form.text_field :price %>
 </p>
 <p><%= form.label :aurthor_id %>
-   <%= form.text_field :aurthor_id %>
+   <%#= form.text_field :aurthor_id %>
+   <%= form.select :aurthor_id, Aurthor.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
 </p>
 <p>
    <%= form.label :category_id %>
-   <%= form.text_area :category_id %>
+   <%#= form.text_area :category_id %>
+   <%= form.select :category_id, Category.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
 </p>
 
 <p>
@@ -27,4 +29,5 @@
 </p>
 <p>
 <%= form.submit %>
+
 <% end %>

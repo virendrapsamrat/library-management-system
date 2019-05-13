@@ -1,4 +1,4 @@
-class Category < ApplicationRecord\
+class Category < ApplicationRecord
 	has_many :books
-	has_many :aurthors
+	#has_many :aurthors
 end
