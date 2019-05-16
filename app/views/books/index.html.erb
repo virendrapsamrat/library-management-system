@@ -17,7 +17,7 @@
       <td><%= book.aurthor_id %></td>
       <td><%= book.category_id %></td>
       <td><%= book.pages %></td>
-      <td><%= book.image %></td>
+      <td><%= image_tag(book.image_url, size:"50x50") %></td>
 
       <td>      
       <%= link_to 'Show', book_path(book) %></td>
@@ -36,3 +36,4 @@
   <hr />
 
     <%#= link_to 'Add new Book', new_book_path, class: 'link-to-text-color' %>
+    <%= will_paginate @books %>
