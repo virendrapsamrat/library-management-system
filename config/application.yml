@@ -1,0 +1,15 @@
+#SMTP_USER_NAME: asheesh.mourya
+#gmail_password: asheesh@bittern1
+#SMTP_USER_ADDRESS: smtp.sendgrid.net
+#gmail_username: asheesh@bittern.co
+
+
+
+SMTP_USER_NAME: asheesh.mourya
+
+SMTP_USER_PASSWORD: asheesh@bittern1
+
+SMTP_USER_ADDRESS: smtp.sendgrid.net
+
+MAIL_FROM: asheesh@bittern.co
+

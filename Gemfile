@@ -58,6 +58,7 @@ gem 'activeadmin'
 gem 'will_paginate' 
 gem 'kaminari'
 gem "pundit"
+gem 'figaro'
 
 
 

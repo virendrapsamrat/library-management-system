@@ -1,14 +1,17 @@
 class BooksController < ApplicationController
 	def index
-		@books=Book.paginate(page: params[:page], per_page: 1)
+		@books=Book.paginate(page: params[:page], per_page: 2)
 	end
 
 	def new
+	#	@book=Book.new        
 	end
 
 	def create
 		@book=Book.new(book_params)
-		@book.save
+		 @book.save
+				#UserMailer.welcome_email(@user).deliver_now
+	
 		redirect_to @book
 	end
 

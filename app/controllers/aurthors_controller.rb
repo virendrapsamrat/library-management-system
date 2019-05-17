@@ -1,6 +1,7 @@
 class AurthorsController < ApplicationController
 	def index
 		@aurthors = Aurthor.all
+		#byebug
 	end
 
 	def new
